@@ -18,6 +18,29 @@
       color: #333;
     }
 
+    /* ==== NAVBAR ==== */
+    .navbar {
+      background: #fff;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #6018DC;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .navbar a:hover {
+      color: #EEAD92;
+    }
+
     /* ==== HEADER DENGAN GRADIENT ==== */
     .header {
       background: linear-gradient(135deg, #EEAD92, #6018DC);
@@ -152,9 +175,24 @@
       from {opacity: 0; transform: scale(0.9);}
       to {opacity: 1; transform: scale(1);}
     }
+
+    /* Foto profil About Me */
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #6018DC;
+      margin: 15px 0;
+    }
   </style>
 </head>
 <body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="#" id="aboutBtn">About Me</a>
+  </nav>
+
   <!-- HEADER -->
   <div class="header">
     <h1>Blog Basis Data.</h1>
@@ -192,7 +230,7 @@
     </div>
   </div>
 
-  <!-- MODAL -->
+  <!-- MODAL KARTU -->
   <div class="modal" id="popupModal">
     <div class="modal-content">
       <span class="close" id="closeModal">&times;</span>
@@ -201,15 +239,26 @@
     </div>
   </div>
 
+  <!-- MODAL ABOUT ME -->
+  <div class="modal" id="aboutModal">
+    <div class="modal-content">
+      <span class="close" id="closeAbout">&times;</span>
+      <h2>About Me</h2>
+      <img src="profil.jpg" alt="Foto Profil" class="profile-pic">
+      <h3>Nama Lengkap</h3>
+      <p><strong>NIM:</strong> 123456789</p>
+      <p><strong>Kelas:</strong> IF-2025A</p>
+    </div>
+  </div>
+
   <script>
-    // Ambil elemen
+    // ==== POPUP KARTU ====
     const cards = document.querySelectorAll('.card');
     const modal = document.getElementById('popupModal');
     const modalTitle = document.getElementById('modalTitle');
     const modalContent = document.getElementById('modalContent');
     const closeModal = document.getElementById('closeModal');
 
-    // Event click untuk setiap kartu
     cards.forEach(card => {
       card.addEventListener('click', () => {
         modalTitle.textContent = card.getAttribute('data-title');
@@ -218,15 +267,33 @@
       });
     });
 
-    // Tutup modal
     closeModal.addEventListener('click', () => {
       modal.style.display = 'none';
     });
 
-    // Tutup jika klik di luar modal
     window.addEventListener('click', (e) => {
       if (e.target === modal) {
         modal.style.display = 'none';
+      }
+    });
+
+    // ==== POPUP ABOUT ME ====
+    const aboutBtn = document.getElementById('aboutBtn');
+    const aboutModal = document.getElementById('aboutModal');
+    const closeAbout = document.getElementById('closeAbout');
+
+    aboutBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      aboutModal.style.display = 'flex';
+    });
+
+    closeAbout.addEventListener('click', () => {
+      aboutModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === aboutModal) {
+        aboutModal.style.display = 'none';
       }
     });
   </script>

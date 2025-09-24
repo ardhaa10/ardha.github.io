@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog Basis Data</title>
   <style>
-    /* ==== RESET SEDERHANA ==== */
+    /* ==== RESET ==== */
     * {
       margin: 0;
       padding: 0;
@@ -18,35 +18,13 @@
       color: #333;
     }
 
-    /* ==== NAVBAR ==== */
-    .navbar {
-      background: #fff;
-      padding: 15px;
-      display: flex;
-      justify-content: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .navbar a {
-      text-decoration: none;
-      color: #6018DC;
-      font-weight: bold;
-      font-size: 1.1em;
-    }
-
-    .navbar a:hover {
-      color: #EEAD92;
-    }
-
     /* ==== HEADER DENGAN GRADIENT ==== */
     .header {
       background: linear-gradient(135deg, #EEAD92, #6018DC);
       color: white;
       text-align: center;
       padding: 80px 20px;
+      position: relative;
     }
 
     .header h1 {
@@ -54,6 +32,25 @@
       font-weight: bold;
     }
 
+    /* Tombol About Me di pojok kanan atas header */
+    .about-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255,255,255,0.2);
+      color: white;
+      padding: 8px 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .about-btn:hover {
+      background: rgba(255,255,255,0.4);
+    }
+
+    /* ==== INTRO ==== */
     .intro {
       text-align: center;
       padding: 20px;
@@ -80,7 +77,6 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       text-align: center;
       width: 250px;
-      overflow: visible;
       cursor: pointer;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -144,9 +140,8 @@
       background: #fff;
       padding: 20px;
       border-radius: 12px;
-      width: 400px;
-      max-width: 90%;
-      text-align: center;
+      width: 500px;
+      max-width: 95%;
       position: relative;
       animation: fadeIn 0.3s ease;
     }
@@ -176,26 +171,36 @@
       to {opacity: 1; transform: scale(1);}
     }
 
-    /* Foto profil About Me */
+    /* Foto profil About Me + teks */
+    .about-flex {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      text-align: left;
+    }
+
     .profile-pic {
       width: 120px;
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid #6018DC;
-      margin: 15px 0;
+    }
+
+    .about-text h3 {
+      margin-bottom: 8px;
+    }
+
+    .about-text p {
+      margin: 4px 0;
     }
   </style>
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <a href="#" id="aboutBtn">About Me</a>
-  </nav>
-
   <!-- HEADER -->
   <div class="header">
     <h1>Blog Basis Data.</h1>
+    <a href="#" class="about-btn" id="aboutBtn">About Me</a>
   </div>
 
   <!-- INTRO -->
@@ -244,10 +249,14 @@
     <div class="modal-content">
       <span class="close" id="closeAbout">&times;</span>
       <h2>About Me</h2>
-      <img src="profil.jpg" alt="Foto Profil" class="profile-pic">
-      <h3>Nama Lengkap</h3>
-      <p><strong>NIM:</strong> 123456789</p>
-      <p><strong>Kelas:</strong> IF-2025A</p>
+      <div class="about-flex">
+        <img src="profil.jpg" alt="Foto Profil" class="profile-pic">
+        <div class="about-text">
+          <h3>Nama Lengkap</h3>
+          <p><strong>NIM:</strong> 123456789</p>
+          <p><strong>Kelas:</strong> IF-2025A</p>
+        </div>
+      </div>
     </div>
   </div>
 

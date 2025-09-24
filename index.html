@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog Basis Data</title>
   <style>
-    /* ==== RESET SEDERHANA ==== */
+    /* ==== RESET ==== */
     * {
       margin: 0;
       padding: 0;
@@ -18,19 +18,91 @@
       color: #333;
     }
 
-    /* ==== HEADER DENGAN GRADIENT ==== */
+    /* ==== HEADER ==== */
     .header {
       background: linear-gradient(135deg, #EEAD92, #6018DC);
       color: white;
-      text-align: center;
-      padding: 80px 20px;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
     }
 
     .header h1 {
-      font-size: 3em;
+      font-size: 2em;
       font-weight: bold;
     }
 
+    /* ==== PROFIL SECTION ==== */
+    .profile-container {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid #6018DC;
+      transform: translateX(-200px);
+      opacity: 0;
+      animation: slideIn 1.5s forwards;
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-text {
+      max-width: 400px;
+      transform: translateX(200px);
+      opacity: 0;
+      animation: slideInText 1.5s forwards;
+      animation-delay: 1s;
+    }
+
+    .profile-text h2 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .profile-text p {
+      margin: 6px 0;
+      font-size: 15px;
+      color: #555;
+    }
+
+    .profile-text a {
+      color: #6018DC;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    @keyframes slideIn {
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInText {
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    /* ==== INTRO ==== */
     .intro {
       text-align: center;
       padding: 20px;
@@ -57,7 +129,6 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       text-align: center;
       width: 250px;
-      overflow: visible;
       cursor: pointer;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -93,7 +164,7 @@
       transition: transform 0.5s ease;
     }
 
-    /* ==== HOVER EFEK ==== */
+    /* ==== HOVER ==== */
     .card:hover {
       transform: translateY(-10px);
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
@@ -103,7 +174,7 @@
       transform: translateX(-50%) rotate(360deg);
     }
 
-    /* ==== MODAL POPUP ==== */
+    /* ==== MODAL ==== */
     .modal {
       display: none; 
       position: fixed;
@@ -152,12 +223,34 @@
       from {opacity: 0; transform: scale(0.9);}
       to {opacity: 1; transform: scale(1);}
     }
+
+    /* ==== FOOTER ==== */
+    footer {
+      margin-top: 40px;
+      padding: 15px;
+      background: #222;
+      color: #ccc;
+      font-size: 14px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
   <!-- HEADER -->
   <div class="header">
     <h1>Blog Basis Data.</h1>
+  </div>
+
+  <!-- PROFIL -->
+  <div class="profile-container">
+    <div class="profile-pic">
+      <img src="foto-profil.jpg" alt="Foto Profil">
+    </div>
+    <div class="profile-text">
+      <h2>Hi!, I'm Muhammad Abimanyu Ardha Nugroho</h2>
+      <p>NIM: 24416255201107</p>
+      <p><a href="https://www.ubpkarawang.ac.id" target="_blank">www.ubpkarawang.ac.id</a></p>
+    </div>
   </div>
 
   <!-- INTRO -->
@@ -200,6 +293,11 @@
       <p id="modalContent"></p>
     </div>
   </div>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 Blog Basis Data. By Ardha.
+  </footer>
 
   <script>
     // Ambil elemen

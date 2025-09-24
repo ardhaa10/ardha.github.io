@@ -22,18 +22,26 @@
     .header {
       background: linear-gradient(135deg, #EEAD92, #6018DC);
       color: white;
-      padding: 20px 40px;
+      padding: 40px 60px;
       display: flex;
-      justify-content: flex-start;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
+      position: relative;
+      text-align: center;
     }
 
+    /* Judul pojok kiri atas */
     .header h1 {
-      font-size: 2em;
+      font-size: 1.8em;
       font-weight: bold;
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      margin: 0;
     }
 
-    /* ==== PROFIL SECTION ==== */
+    /* Profil di dalam banner */
     .profile-container {
       margin-top: 40px;
       display: flex;
@@ -41,15 +49,14 @@
       justify-content: center;
       gap: 30px;
       flex-wrap: wrap;
-      padding: 20px;
     }
 
     .profile-pic {
-      width: 180px;
-      height: 180px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       overflow: hidden;
-      border: 5px solid #6018DC;
+      border: 5px solid #fff;
       transform: translateX(-200px);
       opacity: 0;
       animation: slideIn 1.5s forwards;
@@ -62,28 +69,27 @@
     }
 
     .profile-text {
-      max-width: 400px;
+      text-align: left;
       transform: translateX(200px);
       opacity: 0;
       animation: slideInText 1.5s forwards;
       animation-delay: 1s;
+      color: #fff;
     }
 
     .profile-text h2 {
       margin: 0;
       font-size: 22px;
       font-weight: bold;
-      color: #333;
     }
 
     .profile-text p {
       margin: 6px 0;
-      font-size: 15px;
-      color: #555;
+      font-size: 14px;
     }
 
     .profile-text a {
-      color: #6018DC;
+      color: #ffdeff;
       text-decoration: none;
       font-size: 14px;
     }
@@ -226,30 +232,29 @@
 
     /* ==== FOOTER ==== */
     footer {
-      margin-top: 40px;
-      padding: 15px;
-      background: #222;
-      color: #ccc;
-      font-size: 14px;
-      text-align: center;
-    }
+  margin-top: 40px;
+  padding: 15px;
+  color: #555;
+  font-size: 14px;
+  text-align: center;
+  }
   </style>
 </head>
 <body>
   <!-- HEADER -->
   <div class="header">
     <h1>Blog Basis Data.</h1>
-  </div>
 
-  <!-- PROFIL -->
-  <div class="profile-container">
-    <div class="profile-pic">
-      <img src="foto-profil.jpg" alt="Foto Profil">
-    </div>
-    <div class="profile-text">
-      <h2>Hi!, I'm Muhammad Abimanyu Ardha Nugroho</h2>
-      <p>NIM: 24416255201107</p>
-      <p><a href="https://www.ubpkarawang.ac.id" target="_blank">www.ubpkarawang.ac.id</a></p>
+    <!-- Profil di dalam banner -->
+    <div class="profile-container">
+      <div class="profile-pic">
+        <img src="foto-profil.jpg" alt="Foto Profil">
+      </div>
+      <div class="profile-text">
+        <h2>Hi!, I'm Muhammad Abimanyu Ardha Nugroho</h2>
+        <p>NIM: 24416255201107</p>
+        <p><a href="https://www.ubpkarawang.ac.id" target="_blank">www.ubpkarawang.ac.id</a></p>
+      </div>
     </div>
   </div>
 
@@ -296,7 +301,7 @@
 
   <!-- FOOTER -->
   <footer>
-    &copy; 2025 Blog Basis Data. By Ardha.
+    &copy; 2025 Blog Basis Data. All rights reserved.
   </footer>
 
   <script>

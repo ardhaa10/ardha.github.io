@@ -188,11 +188,11 @@
       background: #fff;
       padding: 30px;
       border-radius: 16px;
-      width: 600px;      /* lebih besar */
-      max-width: 90%;    /* tetap responsif */
-      max-height: 80vh;  /* batasi tinggi agar tidak keluar layar */
-      overflow-y: auto;  /* scroll jika konten panjang */
-      text-align: center;
+      width: 600px;
+      max-width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+      text-align: left;
       position: relative;
       animation: fadeIn 0.3s ease;
     }
@@ -207,6 +207,17 @@
       font-size: 1.05em;
       line-height: 1.6;
       color: #444;
+    }
+
+    .modal-content ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .modal-content ul li {
+      margin-bottom: 6px;
+      font-size: 0.95em;
+      color: #333;
     }
 
     .close {
@@ -266,25 +277,57 @@
 
   <!-- KARTU -->
   <div class="cards">
-    <div class="card" data-title="Apa yang anda harapkan dari MK basis data" data-content="Di mata kuliah ini, diharapkan mahasiswa memahami konsep dasar basis data serta implementasinya dalam dunia nyata.">
+    <div class="card" data-title="Apa yang anda harapkan dari MK Basis Data" data-content="
+      Mata kuliah Basis Data diharapkan dapat memberikan pemahaman mendasar tentang bagaimana data disimpan, diatur, dan dikelola dengan baik. Dengan mempelajari basis data, mahasiswa dapat memiliki kemampuan merancang sistem yang efisien dan dapat digunakan untuk mendukung kebutuhan nyata dalam dunia kerja maupun proyek akademik.
+      <ul>
+        <li>Memahami dasar konsep basis data.</li>
+        <li>Mampu merancang database sesuai kebutuhan.</li>
+        <li>Menguasai penggunaan SQL untuk manipulasi data.</li>
+        <li>Menjadi bekal dalam pengembangan aplikasi/software.</li>
+      </ul>
+    ">
       <div class="circle">1</div>
-      <h3>Harapkan dari MK basis data</h3>
+      <h3>Harapkan dari MK Basis Data</h3>
       <p>Baca Selengkapnya.</p>
     </div>
 
-    <div class="card" data-title="Apa itu Basis Data" data-content="Basis data adalah kumpulan data yang dikelola secara sistematis sehingga dapat diakses, dikelola, dan diperbarui dengan mudah.">
+    <div class="card" data-title="Apa itu Basis Data" data-content="
+      Basis data adalah kumpulan data yang saling berhubungan dan disimpan secara sistematis agar mudah diakses, dikelola, dan diperbarui. Basis data menjadi pondasi penting dalam hampir semua sistem informasi modern karena memungkinkan penyimpanan informasi yang terstruktur.
+      <ul>
+        <li>Kumpulan data yang saling terhubung.</li>
+        <li>Tersimpan secara terstruktur dalam sistem.</li>
+        <li>Memudahkan pencarian, pengolahan, dan penyimpanan data.</li>
+        <li>Digunakan hampir di semua bidang (bisnis, pendidikan, kesehatan, dll).</li>
+      </ul>
+    ">
       <div class="circle">2</div>
       <h3>Apa itu Basis Data</h3>
       <p>Baca Selengkapnya.</p>
     </div>
 
-    <div class="card" data-title="Apa itu Conceptual DB" data-content="Conceptual Database adalah model data tingkat tinggi yang menggambarkan struktur logis dari basis data tanpa memperhatikan detail implementasi fisiknya.">
+    <div class="card" data-title="Apa itu Conceptual DB" data-content="
+      Conceptual Database adalah gambaran umum dari struktur data yang menjelaskan hubungan antar entitas tanpa memikirkan detail teknis penyimpanannya. Model ini biasanya diwujudkan dalam bentuk diagram konseptual seperti ERD (Entity Relationship Diagram).
+      <ul>
+        <li>Fokus pada konsep, bukan teknis penyimpanan.</li>
+        <li>Menjelaskan hubungan antar entitas dan atribut.</li>
+        <li>Membantu perancangan awal sebelum ke tahap fisik.</li>
+        <li>Biasanya menggunakan ERD sebagai alat visualisasi.</li>
+      </ul>
+    ">
       <div class="circle">3</div>
       <h3>Apa itu Conceptual DB</h3>
       <p>Baca Selengkapnya.</p>
     </div>
 
-    <div class="card" data-title="Apa itu Physical Model" data-content="Physical Model menjelaskan bagaimana data disimpan secara fisik di dalam sistem basis data, termasuk struktur tabel, indeks, dan partisi.">
+    <div class="card" data-title="Apa itu Physical Model" data-content="
+      Physical Model adalah representasi nyata dari database yang sudah siap diimplementasikan dalam sistem manajemen basis data (DBMS). Model ini memuat detail teknis seperti tipe data, struktur tabel, indeks, dan cara penyimpanan data.
+      <ul>
+        <li>Menjelaskan bagaimana data benar-benar disimpan.</li>
+        <li>Memuat detail tabel, kolom, tipe data, dan relasi.</li>
+        <li>Mengoptimalkan performa database dengan indeks/partisi.</li>
+        <li>Menjadi tahap akhir sebelum database digunakan secara nyata.</li>
+      </ul>
+    ">
       <div class="circle">4</div>
       <h3>Apa itu Physical Model</h3>
       <p>Baca Selengkapnya.</p>
@@ -296,7 +339,7 @@
     <div class="modal-content">
       <span class="close" id="closeModal">&times;</span>
       <h2 id="modalTitle"></h2>
-      <p id="modalContent"></p>
+      <div id="modalContent"></div>
     </div>
   </div>
 
@@ -316,7 +359,7 @@
     cards.forEach(card => {
       card.addEventListener('click', () => {
         modalTitle.textContent = card.getAttribute('data-title');
-        modalContent.textContent = card.getAttribute('data-content');
+        modalContent.innerHTML = card.getAttribute('data-content'); // pakai innerHTML biar bisa render <ul>
         modal.style.display = 'flex';
       });
     });

@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog Basis Data</title>
   <style>
-    /* ==== RESET ==== */
-    * {
+    
+    {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -18,7 +18,6 @@
       color: #333;
     }
 
-    /* ==== HEADER ==== */
     .header {
       background: linear-gradient(135deg, #EEAD92, #6018DC);
       color: white;
@@ -100,7 +99,6 @@
       }
     }
 
-    /* ==== INTRO ==== */
     .intro {
       text-align: center;
       padding: 20px;
@@ -109,7 +107,6 @@
       margin: 0 auto;
     }
 
-    /* ==== GRID KARTU ==== */
     .cards {
       display: flex;
       justify-content: center;
@@ -169,7 +166,6 @@
       transform: translateX(-50%) rotate(360deg);
     }
 
-    /* ==== MODAL ==== */
     .modal {
       display: none; 
       position: fixed;
@@ -238,7 +234,6 @@
       to {opacity: 1; transform: scale(1);}
     }
 
-    /* ==== NAVIGASI MODAL ==== */
     .modal-nav {
       display: flex;
       justify-content: space-between;
@@ -260,7 +255,6 @@
       opacity: 0.8;
     }
 
-    /* ==== FOOTER ==== */
     footer {
       margin-top: 40px;
       padding: 20px;
@@ -278,7 +272,6 @@
       text-decoration: none;
     }
 
-    /* ==== SOSMED ICONS ==== */
     .social-icons {
       margin-top: 15px;
       display: flex;
@@ -304,7 +297,7 @@
   </style>
 </head>
 <body>
-  <!-- HEADER -->
+  
   <div class="header">
     <h1>Blog Basis Data.</h1>
 
@@ -320,22 +313,19 @@
     </div>
   </div>
 
-  <!-- INTRO -->
   <div class="intro">
     Selamat datang di blog Basis Data!
   </div>
 
-  <!-- KARTU -->
  <div class="cards">
     <div class="card" data-title="Apa yang saya harapkan dari MK Basis Data" data-content='
-  <p><strong>Post 1</strong> | <em>Dipublikasikan: 26 September 2025</em></p>
+  <p><strong>Post 1</strong> | <em>25 September 2025</em></p>
   <h2>Yang saya harapkan dari MK Basis Data</h2>
   <p>
     Saya berharap Mata Kuliah Basis Data dapat memberikan pemahaman mendasar tentang bagaimana data disimpan, 
     diatur, dan dikelola dengan baik. Dengan mempelajari basis data, saya ingin memiliki bekal yang cukup 
     untuk merancang sistem yang efisien serta mendukung kebutuhan nyata baik di dunia kerja maupun proyek akademik. 
-    Harapannya, mata kuliah ini tidak hanya membahas teori, tetapi juga praktik langsung agar pengalaman belajar lebih 
-    bermakna.
+    Harapannya, mata kuliah ini tidak hanya membahas teori, tetapi juga praktik langsung.
   </p>
   <p>
     Selain itu, saya ingin menguasai keterampilan teknis dalam menggunakan SQL serta memahami alur pembuatan database 
@@ -353,7 +343,7 @@
     </div>
 
     <div class="card" data-title="Apa itu Basis Data?" data-content='
-    <p><strong>Post 2</strong> | <em>Dipublikasikan: 26 September 2025</em></p>
+    <p><strong>Post 2</strong> | <em>26 September 2025</em></p>
     <h2>Apa itu Basis Data?</h2>
    <p>
     Basis data adalah kumpulan data yang saling berhubungan dan disimpan secara sistematis agar mudah diakses, 
@@ -377,7 +367,7 @@
     </div>
 
    <div class="card" data-title="Apa itu Conceptual DB" data-content='
-  <p><strong>Post 3</strong> | <em>Dipublikasikan: 26 September 2025</em></p>
+  <p><strong>Post 3</strong> | <em>27 September 2025</em></p>
   <h2>Apa itu Conceptual DB?</h2>
   <p>
     Conceptual Database adalah gambaran umum dari struktur data yang menjelaskan hubungan antar entitas 
@@ -400,7 +390,7 @@
     </div>
 
     <div class="card" data-title="Apa itu Physical Model" data-content='
-  <p><strong>Post 4</strong> | <em>Dipublikasikan: 27 September 2025</em></p>
+  <p><strong>Post 4</strong> | <em>27 September 2025</em></p>
   <h2>Apa itu Physical Model?</h2>
   <p>
     Physical Model adalah representasi nyata dari database yang sudah siap diimplementasikan dalam 
@@ -423,7 +413,6 @@
     </div>
   </div>
 
-  <!-- MODAL -->
   <div class="modal" id="popupModal">
     <div class="modal-content">
       <span class="close" id="closeModal">&times;</span>
@@ -435,15 +424,13 @@
     </div>
   </div>
 
-  <!-- FOOTER -->
   <footer>
     <a href="https://www.ubpkarawang.ac.id" target="_blank">www.ubpkarawang.ac.id</a>
     <br>
     &copy; 2025 Blog Basis Data. All rights reserved.
 
-    <!-- SOSMED -->
     <div class="social-icons">
-      <a href="https://www.instagram.com/ardaaaaann" target="_blank">
+      <a href="https://www.instagram.com/ardhaaaaann" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
       </a>
       <a href="https://github.com/ardhaa10" target="_blank">

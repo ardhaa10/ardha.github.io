@@ -188,9 +188,9 @@
       background: #fff;
       padding: 30px;
       border-radius: 16px;
-      width: 600px;
-      max-width: 90%;
-      max-height: 80vh;
+      width: 800px;    
+      max-width: 95%;
+      max-height: 85vh;
       overflow-y: auto;
       text-align: left;
       position: relative;
@@ -199,7 +199,7 @@
 
     .modal-content h2 {
       color: #6018DC;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       font-size: 1.4em;
     }
 
@@ -207,6 +207,9 @@
       font-size: 1.05em;
       line-height: 1.6;
       color: #444;
+      margin-bottom: 18px;
+      text-align: justify;
+      text-indent: 0px;
     }
 
     .modal-content ul {
@@ -235,6 +238,28 @@
       to {opacity: 1; transform: scale(1);}
     }
 
+    /* ==== NAVIGASI MODAL ==== */
+    .modal-nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .modal-nav button {
+      background: linear-gradient(135deg, #EEAD92, #6018DC);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .modal-nav button:hover {
+      opacity: 0.8;
+    }
+
     /* ==== FOOTER ==== */
     footer {
       margin-top: 40px;
@@ -242,7 +267,7 @@
       color: #555;
       font-size: 14px;
       text-align: center;
-      background: #f7f7f7; /* putih polos */
+      background: #f7f7f7;
     }
 
     footer a {
@@ -262,21 +287,20 @@
     }
 
     .social-icons a img {
-  width: 32px;
-  height: 32px;
-  filter: grayscale(100%); /* default abu-abu */
-  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
-  border-radius: 50%;   /* selalu bulat */
-  background: transparent; /* pastikan tidak ada kotak putih */
-}
+      width: 32px;
+      height: 32px;
+      filter: grayscale(100%);
+      transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+      border-radius: 50%;
+      background: transparent;
+    }
 
-.social-icons a img:hover {
-  filter: grayscale(0%); /* jadi berwarna */
-  transform: scale(1.3) translateY(-4px); /* bounce kecil */
-  box-shadow: 0 0 12px rgba(238, 173, 146, 0.8),
-              0 0 18px rgba(96, 24, 220, 0.7); /* glow ungu-oranye */
-}
-
+    .social-icons a img:hover {
+      filter: grayscale(0%);
+      transform: scale(1.3) translateY(-4px);
+      box-shadow: 0 0 12px rgba(238, 173, 146, 0.8),
+                  0 0 18px rgba(96, 24, 220, 0.7);
+    }
   </style>
 </head>
 <body>
@@ -289,7 +313,7 @@
         <img src="images/Unrecognizable Makeup.jpeg" alt="Foto Profil">
       </div>
       <div class="profile-text">
-        <h2>Halo! Saya Muhammad Abimanyu Ardha Nugroho</h2>
+        <h2>Hi!, I'm Muhammad Abimanyu Ardha Nugroho</h2>
         <p>NIM: 24416255201107</p>
         <p>if24.muhammadnugroho@mhs.ubpkarawang.ac.id</p>
       </div>
@@ -298,62 +322,101 @@
 
   <!-- INTRO -->
   <div class="intro">
-    Yuk, kenalan lebih dekat dengan Basis Data! 🚀
+    Selamat datang di blog Basis Data!
   </div>
 
   <!-- KARTU -->
-  <div class="cards">
-    <div class="card" data-title="Apa yang saya harapkan dari MK Basis Data" data-content="
-      Saya berharap Mata kuliah Basis Data dapat memberikan pemahaman mendasar tentang bagaimana data disimpan, diatur, dan dikelola dengan baik. Dengan mempelajari basis data, dapat memiliki kemampuan merancang sistem yang efisien dan dapat digunakan untuk mendukung kebutuhan nyata dalam dunia kerja maupun proyek akademik.
-      <ul>
-        <li>Memahami dasar konsep basis data.</li>
-        <li>Mampu merancang database sesuai kebutuhan.</li>
-        <li>Menguasai penggunaan SQL.</li>
-        <li>Menjadi bekal dalam pengembangan aplikasi/software.</li>
-      </ul>
-    ">
+ <div class="cards">
+    <div class="card" data-title="Apa yang saya harapkan dari MK Basis Data" data-content='
+  <p><strong>Post 1</strong> | <em>Dipublikasikan: 26 September 2025</em></p>
+  <h2>Yang saya harapkan dari MK Basis Data</h2>
+  <p>
+    Saya berharap Mata Kuliah Basis Data dapat memberikan pemahaman mendasar tentang bagaimana data disimpan, 
+    diatur, dan dikelola dengan baik. Dengan mempelajari basis data, saya ingin memiliki bekal yang cukup 
+    untuk merancang sistem yang efisien serta mendukung kebutuhan nyata baik di dunia kerja maupun proyek akademik. 
+    Harapannya, mata kuliah ini tidak hanya membahas teori, tetapi juga praktik langsung agar pengalaman belajar lebih 
+    bermakna.
+  </p>
+  <p>
+    Selain itu, saya ingin menguasai keterampilan teknis dalam menggunakan SQL serta memahami alur pembuatan database 
+    dari awal perancangan hingga implementasi. Kemampuan ini akan sangat bermanfaat saat membuat aplikasi, sistem, 
+    maupun proyek yang membutuhkan pengelolaan data secara optimal.
+  </p>
+  <p>
+    Sebagai contoh, ketika mengembangkan aplikasi inventaris barang, saya ingin mampu merancang tabel yang 
+    dapat menghubungkan data barang, pemasok, dan transaksi secara efisien. Dengan begitu, sistem yang dibangun 
+    tidak hanya berjalan tetapi juga mudah dikembangkan di masa depan.
+  </p>'>
       <div class="circle">1</div>
       <h3>Harapan dari MK Basis Data</h3>
       <p>Baca Selengkapnya.</p>
     </div>
 
-    <div class="card" data-title="Apa itu Basis Data?" data-content="
-      Basis data adalah kumpulan data yang saling berhubungan dan disimpan secara sistematis agar mudah diakses, dikelola, dan diperbarui. Basis data menjadi pondasi penting dalam hampir semua sistem informasi modern karena memungkinkan penyimpanan informasi yang terstruktur.
-      <ul>
-        <li>Kumpulan data yang saling terhubung.</li>
-        <li>Tersimpan secara terstruktur dalam sistem.</li>
-        <li>Memudahkan pencarian, pengolahan, dan penyimpanan data.</li>
-        <li>Digunakan hampir di semua bidang (bisnis, pendidikan, kesehatan, dll).</li>
-      </ul>
-    ">
+    <div class="card" data-title="Apa itu Basis Data?" data-content='
+    <p><strong>Post 2</strong> | <em>Dipublikasikan: 26 September 2025</em></p>
+    <h2>Apa itu Basis Data?</h2>
+   <p>
+    Basis data adalah kumpulan data yang saling berhubungan dan disimpan secara sistematis agar mudah diakses, 
+    dikelola, dan diperbarui. Basis data menjadi pondasi penting dalam hampir semua sistem informasi modern 
+    karena memungkinkan penyimpanan informasi yang terstruktur, konsisten, dan aman.
+  </p>
+    <p>
+    Dalam kehidupan sehari-hari, basis data digunakan pada berbagai bidang, mulai dari bisnis, pendidikan, 
+    hingga kesehatan. Contohnya, aplikasi e-commerce menyimpan data produk dan transaksi dalam basis data, 
+    sekolah menggunakan basis data untuk mengelola informasi siswa, dan rumah sakit memanfaatkan basis data 
+    untuk mencatat rekam medis pasien.
+  </p>
+  <p>
+    Misalnya, ketika kita melakukan pembelian online, seluruh proses mulai dari pencatatan produk di keranjang, 
+    konfirmasi pembayaran, hingga pengiriman barang semuanya tersimpan dalam basis data. Hal ini memastikan 
+    bahwa setiap transaksi tercatat dengan rapi dan bisa dilacak kapan saja.
+  </p>'>
       <div class="circle">2</div>
       <h3>Apa itu Basis Data?</h3>
       <p>Baca Selengkapnya.</p>
     </div>
 
-    <div class="card" data-title="Apa itu Conceptual DB" data-content="
-      Conceptual Database adalah gambaran umum dari struktur data yang menjelaskan hubungan antar entitas tanpa memikirkan detail teknis penyimpanannya. Model ini biasanya diwujudkan dalam bentuk diagram konseptual seperti ERD (Entity Relationship Diagram).
-      <ul>
-        <li>Fokus pada konsep, bukan teknis penyimpanan.</li>
-        <li>Menjelaskan hubungan antar entitas dan atribut.</li>
-        <li>Membantu perancangan awal sebelum ke tahap fisik.</li>
-        <li>Biasanya menggunakan ERD sebagai alat visualisasi.</li>
-      </ul>
-    ">
+   <div class="card" data-title="Apa itu Conceptual DB" data-content='
+  <p><strong>Post 3</strong> | <em>Dipublikasikan: 26 September 2025</em></p>
+  <h2>Apa itu Conceptual DB?</h2>
+  <p>
+    Conceptual Database adalah gambaran umum dari struktur data yang menjelaskan hubungan antar entitas 
+    tanpa memikirkan detail teknis penyimpanan. Model ini sangat penting sebagai langkah awal dalam 
+    perancangan sistem, karena memudahkan pemahaman antara developer dan pengguna terkait apa yang dibutuhkan.
+  </p>
+  <p>
+    Biasanya, conceptual model diwujudkan dalam bentuk Entity Relationship Diagram (ERD), yang menunjukkan 
+    entitas, atribut, dan hubungan antar entitas. Dengan model ini, pengembang bisa memahami alur logis 
+    data sebelum masuk ke tahap fisik.
+  </p>
+  <p>
+    Contohnya, dalam sistem perpustakaan, conceptual DB akan memetakan entitas seperti Anggota, Buku, dan 
+    Peminjaman. Hubungan antar entitas ini memudahkan untuk melihat bagaimana data saling terhubung sebelum 
+    dirancang menjadi tabel nyata di dalam DBMS.
+  </p>'>
       <div class="circle">3</div>
       <h3>Apa itu Conceptual DB?</h3>
       <p>Baca Selengkapnya.</p>
     </div>
 
-    <div class="card" data-title="Apa itu Physical Model" data-content="
-      Physical Model adalah representasi nyata dari database yang sudah siap diimplementasikan dalam sistem manajemen basis data (DBMS). Model ini memuat detail teknis seperti tipe data, struktur tabel, indeks, dan cara penyimpanan data.
-      <ul>
-        <li>Menjelaskan bagaimana data benar-benar disimpan.</li>
-        <li>Memuat detail tabel, kolom, tipe data, dan relasi.</li>
-        <li>Mengoptimalkan performa database dengan indeks/partisi.</li>
-        <li>Menjadi tahap akhir sebelum database digunakan secara nyata.</li>
-      </ul>
-    ">
+    <div class="card" data-title="Apa itu Physical Model" data-content='
+  <p><strong>Post 4</strong> | <em>Dipublikasikan: 27 September 2025</em></p>
+  <h2>Apa itu Physical Model?</h2>
+  <p>
+    Physical Model adalah representasi nyata dari database yang sudah siap diimplementasikan dalam 
+    sistem manajemen basis data (DBMS). Model ini lebih detail dibanding conceptual model, karena 
+    sudah menjelaskan tipe data, struktur tabel, indeks, serta cara penyimpanan data secara fisik.
+  </p>
+  <p>
+    Model fisik bertujuan agar sistem yang dibuat dapat berjalan lebih cepat, aman, dan efisien. 
+    Performa database biasanya dioptimalkan dengan menambahkan indeks, partisi tabel, atau pengaturan 
+    penyimpanan tertentu. Inilah tahap akhir sebelum database benar-benar digunakan dalam aplikasi nyata.
+  </p>
+  <p>
+    Misalnya, dalam sistem toko online, physical model akan menentukan bahwa tabel Produk memiliki kolom 
+    ID bertipe integer, nama produk bertipe varchar, harga bertipe decimal, serta indeks pada kolom ID 
+    untuk mempercepat pencarian. Dengan begitu, performa sistem dapat meningkat saat data semakin besar.
+  </p>'>
       <div class="circle">4</div>
       <h3>Apa itu Physical Model?</h3>
       <p>Baca Selengkapnya.</p>
@@ -364,8 +427,11 @@
   <div class="modal" id="popupModal">
     <div class="modal-content">
       <span class="close" id="closeModal">&times;</span>
-      <h2 id="modalTitle"></h2>
       <div id="modalContent"></div>
+      <div class="modal-nav">
+        <button id="prevPost">⬅ Prev</button>
+        <button id="nextPost">Next ➡</button>
+      </div>
     </div>
   </div>
 
@@ -377,7 +443,7 @@
 
     <!-- SOSMED -->
     <div class="social-icons">
-      <a href="https://www.instagram.com/ardhaaaaann" target="_blank">
+      <a href="https://www.instagram.com/ardaaaaann" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
       </a>
       <a href="https://github.com/ardhaa10" target="_blank">
@@ -392,15 +458,22 @@
   <script>
     const cards = document.querySelectorAll('.card');
     const modal = document.getElementById('popupModal');
-    const modalTitle = document.getElementById('modalTitle');
     const modalContent = document.getElementById('modalContent');
     const closeModal = document.getElementById('closeModal');
+    const prevBtn = document.getElementById('prevPost');
+    const nextBtn = document.getElementById('nextPost');
 
-    cards.forEach(card => {
+    let currentIndex = 0;
+
+    function showPost(index) {
+      modalContent.innerHTML = cards[index].getAttribute('data-content');
+      currentIndex = index;
+      modal.style.display = 'flex';
+    }
+
+    cards.forEach((card, index) => {
       card.addEventListener('click', () => {
-        modalTitle.textContent = card.getAttribute('data-title');
-        modalContent.innerHTML = card.getAttribute('data-content'); 
-        modal.style.display = 'flex';
+        showPost(index);
       });
     });
 
@@ -412,6 +485,16 @@
       if (e.target === modal) {
         modal.style.display = 'none';
       }
+    });
+
+    prevBtn.addEventListener('click', () => {
+      let newIndex = (currentIndex - 1 + cards.length) % cards.length;
+      showPost(newIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      let newIndex = (currentIndex + 1) % cards.length;
+      showPost(newIndex);
     });
   </script>
 </body>

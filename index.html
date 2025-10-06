@@ -3,66 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Basis Data</title>
-  <link rel="stylesheet" href="/basisdata/style.css">
+  <title>Blog Basis Data</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; font-family: Helvetica, sans-serif; }
+    body { padding-top: 70px; }
+    header { position: fixed; top: 0; left: 0; width: 100%; background: white; display: flex; justify-content: space-between; align-items: center; padding: 15px 50px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 1000; }
+    header h1 { font-size: 20px; color: #333; }
+    nav ul { list-style: none; display: flex; gap: 20px; }
+    nav ul li a { text-decoration: none; color: #333; font-weight: bold; transition: 0.3s; }
+    nav ul li a:hover { color: #6018DC; }
+    section { padding: 80px 50px; min-height: 100vh; }
+    #home { background: url('https://wallpapers.com/images/hd/minimalist-purple-gradient-background-3m6uzh4weulpsjtd.jpg') no-repeat center/cover; color: white; display: flex; flex-direction: column; justify-content: center; text-align: center; }
+    #home h2 { font-size: 32px; text-shadow: 2px 2px 5px rgba(0,0,0,0.7); }
+    #home p { margin-top: 20px; line-height: 1.6; font-size: 18px; }
+    #posts { background: #fff; text-align: center; }
+    #posts h2 { margin-bottom: 40px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .card { background: #f5f5f5; border-radius: 15px; padding: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; text-decoration: none; color: inherit; }
+    .card:hover { transform: translateY(-8px) scale(1.03); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+    .card img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; background: white; padding: 5px; }
+    .card p { margin-top: 15px; font-weight: bold; }
+    #contact { background: #000; color: white; display: flex; justify-content: center; align-items: center; }
+    .contact-card { background: #111; border-radius: 12px; padding: 30px; display: flex; align-items: center; gap: 20px; box-shadow: 0 4px 8px rgba(255,255,255,0.1); max-width: 600px; }
+    .contact-card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; }
+    .icons { margin-top: 10px; display: flex; flex-direction: column; gap: 5px; }
+    .icons a { text-decoration: none; color: white; font-size: 14px; transition: 0.3s; }
+    .icons a:hover { color: #6018DC; }
+    @media (max-width: 768px) { header { flex-direction: column; padding: 10px 20px; } nav ul { flex-direction: column; gap: 10px; } section { padding: 60px 20px; } .contact-card { flex-direction: column; text-align: center; } }
+  </style>
 </head>
 <body>
-  <div class="header">
-    <h1>Basis Data.</h1>
 
-    <div class="profile-container">
-      <div class="profile-pic">
-        <img src="./images/profil.jpg" alt="Foto Profil">
-      </div>
-      <div class="profile-text">
-        <h2>Halo! Saya Muhammad Abimanyu Ardha Nugroho</h2>
-        <p>Teknik Informatika</p>
-        <p>NIM: 24416255201107</p>
-        <p>if24.muhammadnugroho@mhs.ubpkarawang.ac.id</p>
+  <header>
+    <h1>Blog Basis Data</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#posts">Post</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <div class="content">
+      <h2>Selamat Datang di Blog Basis Data</h2>
+      <p>Kumpulan catatan, pembahasan, dan materi seputar Basis Data. Klik salah satu post untuk membaca lebih lanjut.</p>
+    </div>
+  </section>
+
+  <section id="posts">
+    <h2>Daftar Post</h2>
+    <div class="cards">
+      <a href="post1.html" class="card">
+        <img src="images/post1.jpg" alt="Post 1">
+        <p>Post 1: Harapan</p>
+      </a>
+      <a href="post2.html" class="card">
+        <img src="images/post2.jpg" alt="Post 2">
+        <p>Post 2: Apa itu Basis Data?</p>
+      </a>
+      <a href="post3.html" class="card">
+        <img src="images/post3.jpg" alt="Post 3">
+        <p>Post 3: Apa itu Conceptual DB?</p>
+      </a>
+      <a href="post4.html" class="card">
+        <img src="images/post4.jpg" alt="Post 4">
+        <p>Post 4: Apa itu Physical Model?</p>
+      </a>
+      <a href="post5.html" class="card">
+        <img src="images/post5.jpg" alt="Post 5">
+        <p>Post 5: Installasi MySQL</p>
+      </a>
+      <a href="post6.html" class="card">
+        <img src="images/post6.jpg" alt="Post 6">
+        <p>Post 6: Apa itu Attribute, Entitas dan Relasi dalam ERD</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-card">
+      <img src="images/1.jpg" alt="Foto Penulis">
+      <div class="contact-info">
+        <h3>Halo! Saya Muhammad Abimanyu Ardha Nugroho</h3>
+        <div class="icons">
+          <a href="https://wa.me/089521203885">📞 +62 895-2120-3885</a>
+          <a href="mailto:abimanyuardha@gmail.com">📧 abimanyuardha@gmail.com</a>
+          <a href="https://instagram.com/ardhaaaaann">📷 @ardhaaaaann</a>
+          <a href="https://github.com/ardhaa10">💻 github.com/ardhaa10</a>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="intro">
-    Yuk, Kenal lebih dekat Basis Data dengan baca post di bawah!
-  </div>
-
-  <div class="cards">
-    <a href="./post1.html" class="card">
-      <div class="circle">1</div>
-      <h3>Harapan</h3>
-      <p>Baca Selengkapnya.</p>
-    </a>
-
-    <a href="./post2.html" class="card">
-      <div class="circle">2</div>
-      <h3>Apa itu Basis Data?</h3>
-      <p>Baca Selengkapnya.</p>
-    </a>
-
-    <a href="./post3.html" class="card">
-      <div class="circle">3</div>
-      <h3>Apa itu Conceptual DB?</h3>
-      <p>Baca Selengkapnya.</p>
-    </a>
-
-    <a href="./post4.html" class="card">
-      <div class="circle">4</div>
-      <h3>Apa itu Physical Model?</h3>
-      <p>Baca Selengkapnya.</p>
-    </a>
-
-    <a href="./post5.html" class="card">
-      <div class="circle">5</div>
-      <h3>Installasi MySQL</h3>
-      <p>Baca Selengkapnya.</p>
-    </a>
-
-    <a href="./post6.html" class="card">
-      <div class="circle">6</div>
-      <h3>Apa itu attribute, entitas dan relasi dalam ERD</h3>
-      <p>Baca Selengkapnya.</p>
-    </a>
-  </div>
 </body>
 </html>

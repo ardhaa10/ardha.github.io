@@ -6,7 +6,7 @@ nav ul { list-style: none; display: flex; gap: 20px; }
 nav ul li a { text-decoration: none; color: #333; font-weight: bold; transition: 0.3s; }
 nav ul li a:hover { color: #6018DC; }
 section { padding: 80px 50px; min-height: 100vh; }
-#home { background: url('https://wallpapers.com/images/hd/minimalist-purple-gradient-background-3m6uzh4weulpsjtd.jpg') no-repeat center/cover; color: white; display: flex; flex-direction: column; justify-content: center; text-align: center; }
+#home { background: url('https://smb.telkomuniversity.ac.id/wp-content/uploads/2024/12/Apa-Itu-Basis-Data-Manfaat-dan-Komponennya-1.jpg') no-repeat center/cover; color: white; display: flex; flex-direction: column; justify-content: center; text-align: center; }
 #home h2 { font-size: 32px; text-shadow: 2px 2px 5px rgba(0,0,0,0.7); }
 #home p { margin-top: 20px; line-height: 1.6; font-size: 18px; }
 #posts { background: #fff; text-align: center; }
